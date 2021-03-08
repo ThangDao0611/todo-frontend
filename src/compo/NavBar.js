@@ -1,16 +1,32 @@
-import React, { Component } from "react";
-import { Anchor } from "antd";
+import React, { Component} from "react";
+import { Menu} from "antd";
 
-const { Link } = Anchor;
+import { HomeOutlined, PlusOutlined } from "@ant-design/icons";
+
+//const { SubMenu } = Menu;
 
 class NavBar extends Component {
     render() {
         return (
-        <Anchor>
-            <Link href="/" title="Home"></Link>
-            <Link href="/Add" title="Add"></Link>
-        </Anchor>
-    );
+            <Menu theme="dark" mode="horizontal" >
+                
+                
+                <Menu.Item key="/">
+                <HomeOutlined />
+                <a href="/">
+                    <span>Home</span>
+                </a>
+                </Menu.Item>
+                <Menu.Item key="/Add">
+                <PlusOutlined />
+                <a href="./Add">
+                    <span>Add</span>
+                </a>
+                </Menu.Item>
+                
+                
+            </Menu>
+        );
     }
 }
 
